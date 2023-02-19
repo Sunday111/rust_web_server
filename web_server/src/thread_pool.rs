@@ -7,7 +7,7 @@ use std::sync::Arc;
 use std::sync::Mutex;
 
 pub struct ThreadPool {
-    workers: Vec<Worker>,
+    _workers: Vec<Worker>,
     sender: Option<mpsc::Sender<Job>>,
 }
 
@@ -54,7 +54,7 @@ impl ThreadPool {
         drop(receiver);
 
         Ok(ThreadPool {
-            workers,
+            _workers: workers,
             sender: Some(sender),
         })
     }

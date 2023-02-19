@@ -1,5 +1,4 @@
 use std::{
-    cell::RefCell,
     fmt::Display,
     io::{BufRead, BufReader, Write as IO_Write},
     net::{TcpListener, TcpStream},
